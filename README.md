@@ -406,15 +406,15 @@ Durante o desenvolvimento deste projeto, aprofundei conhecimentos em:
 <tr>
 <td align="center">
 
-<img src="https://avatars.githubusercontent.com/Cateano93" width="100" style="border-radius: 50%; border: 3px solid #10a37f;" />
+<img src="https://avatars.githubusercontent.com/matheusflorindo32" width="100" style="border-radius: 50%; border: 3px solid #10a37f;" />
 
 **Matheus Florindo de Deus**
 
 🎓 Desenvolvedor Full Stack | 🇧🇷 Brasil
 
-[![GitHub](https://img.shields.io/badge/GitHub-@Cateano93-181717?style=flat-square&logo=github)](https://github.com/Cateano93)
+[![GitHub](https://img.shields.io/badge/GitHub-@matheusflorindo32-181717?style=flat-square&logo=github)](https://github.com/matheusflorindo32)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Matheus%20Florindo-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/matheus-florindo)
-[![DIO](https://img.shields.io/badge/DIO-Perfil-FF5722?style=flat-square)](https://www.dio.me/users/Cateano93)
+[![DIO](https://img.shields.io/badge/DIO-Perfil-FF5722?style=flat-square)](https://www.dio.me/users/matheusflorindo32)
 
 </td>
 </tr>
