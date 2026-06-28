@@ -7,12 +7,13 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 /**
- * RATE LIMITING SIMPLEs - Protege contra abuso da API
- * Limita a 5 requisições por minuto por IP
+ * RATE LIMITING - Protege contra abuso da API
+ * Limita a 30 requisições por minuto por IP
+ * (suficiente para uso normal, protege contra spam/ataques)
  */
 const rateLimit = new Map();
 const RATE_LIMIT_WINDOW = 60000; // 1 minuto
-const RATE_LIMIT_MAX = 5; // 5 requisições por janela
+const RATE_LIMIT_MAX = 30; // 30 requisições por janela
 
 const rateLimitMiddleware = (req, res, next) => {
   const ip = req.headers['x-forwarded-for']?.split(',')[0]?.trim() || req.ip || 'unknown';
@@ -37,7 +38,7 @@ const rateLimitMiddleware = (req, res, next) => {
     const retryAfter = Math.ceil((data.start + RATE_LIMIT_WINDOW - now) / 1000);
     return res.status(429).json({
       error: 'Muitas requisições',
-      details: `Limite de ${RATE_LIMIT_MAX} requisições por minuto atingido. Aguarde ${retryAfter}s.`,
+      details: `Limite de ${RATE_LIMIT_MAX} mensagens por minuto atingido. Aguarde ${retryAfter}s.`,
       retryAfter,
     });
   }
