@@ -6,9 +6,9 @@
 <br>
 
 <!-- Badges de qualidade -->
-[![GitHub stars](https://img.shields.io/github/stars/Cateano93/chatgpt-clone-dio?style=for-the-badge&logo=github&color=gold)](https://github.com/Cateano93/chatgpt-clone-dio/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/Cateano93/chatgpt-clone-dio?style=for-the-badge&logo=github&color=blue)](https://github.com/Cateano93/chatgpt-clone-dio/network)
-[![GitHub issues](https://img.shields.io/github/issues/Cateano93/chatgpt-clone-dio?style=for-the-badge&logo=github&color=red)](https://github.com/Cateano93/chatgpt-clone-dio/issues)
+[![GitHub stars](https://img.shields.io/github/stars/matheusflorindo32/chatgpt-clone-dio?style=for-the-badge&logo=github&color=gold)](https://github.com/matheusflorindo32/chatgpt-clone-dio/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/matheusflorindo32/chatgpt-clone-dio?style=for-the-badge&logo=github&color=blue)](https://github.com/matheusflorindo32/chatgpt-clone-dio/network)
+[![GitHub issues](https://img.shields.io/github/issues/matheusflorindo32/chatgpt-clone-dio?style=for-the-badge&logo=github&color=red)](https://github.com/matheusflorindo32/chatgpt-clone-dio/issues)
 [![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge&logo=open-source-initiative)](LICENSE)
 
 <!-- Badges de tecnologias -->
