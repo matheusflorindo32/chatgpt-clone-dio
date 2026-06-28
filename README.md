@@ -59,7 +59,7 @@
 
 | 🎨 Frontend (Vercel) | ⚙️ Backend (Railway) |
 |:---:|:---:|
-| [**🔗 chatgpt-clone-dio.vercel.app**](https://chatgpt-clone-aluvpq5w6-matheusflorindo32s-projects.vercel.app/) | [**🔗 API Status**](https://chatgpt-clone-dio-production.up.railway.app/health) |
+| [**🔗 chatgpt-clone-dio.vercel.app**](https://chatgpt-clone-dio-git-main-matheusflorindo32s-projects.vercel.app/) | [**🔗 API Status**](https://chatgpt-clone-dio-production.up.railway.app/health) |
 
 > 💡 **O frontend está no Vercel** e o backend protegido no Railway
 
@@ -296,7 +296,7 @@ Deploy completo com **Railway** (backend) + **Vercel** (frontend).
    ```env
    OPENAI_API_KEY=sk-sua_chave_api_aqui
    OPENAI_MODEL=gpt-3.5-turbo
-   FRONTEND_URL=https://chatgpt-clone-aluvpq5w6-matheusflorindo32s-projects.vercel.app
+   FRONTEND_URL=https://chatgpt-clone-dio-git-main-matheusflorindo32s-projects.vercel.app
    ```
 5. Clique em **Deploy**
 6. Copie a URL gerada (ex: `https://chatgpt-clone-dio-production.up.railway.app`)
