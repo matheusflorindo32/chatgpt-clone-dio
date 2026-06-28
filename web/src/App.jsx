@@ -31,11 +31,6 @@ function App() {
   const checkServerStatus = async () => {
     const isHealthy = await checkServerHealth();
     setServerStatus(isHealthy);
-    if (!isHealthy) {
-      setError('Servidor offline. Inicie o backend com: npm run dev (pasta server)');
-    } else {
-      setError(null);
-    }
   };
 
   const scrollToBottom = () => {
@@ -69,10 +64,16 @@ function App() {
 
       setMessages((prev) => [...prev, botMsg]);
     } catch (err) {
-      // Mensagem de erro
+      // Mensagem de erro amigável
+      let errorMessage = 'Erro ao conectar com o servidor. Tente novamente em alguns segundos.';
+      
+      if (err.message.includes('ECONNREFUSED') || err.message.includes('não foi possível conectar')) {
+        errorMessage = '🔄 Servidor em manutenção. Aguarde um momento e tente novamente.';
+      }
+
       const errorMsg = {
         id: Date.now() + 1,
-        text: err.message,
+        text: errorMessage,
         isUser: false,
         isError: true,
         timestamp: new Date().toLocaleTimeString(),
@@ -123,8 +124,7 @@ function App() {
               </div>
               {!serverStatus && (
                 <div className="welcome-warning">
-                  ⚠️ <strong>Servidor offline:</strong> Inicie o backend com{' '}
-                  <code>npm run dev</code> na pasta <code>server/</code>
+                  🔄 <strong>Conectando ao servidor...</strong> Aguarde um instante.
                 </div>
               )}
             </div>
