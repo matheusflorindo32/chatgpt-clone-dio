@@ -40,6 +40,7 @@
 - [🛠️ Tecnologias](#️-tecnologias)
 - [📁 Estrutura](#-estrutura)
 - [🚀 Instalação](#-instalação)
+- [🌐 Deploy em Produção](#-deploy-em-produção)
 - [⚙️ Configuração](#️-configuração)
 - [🔒 Segurança](#-segurança)
 - [📚 Aprendizados](#-aprendizados)
@@ -167,6 +168,8 @@ graph LR
 │   ├── 📄 package.json                 # Dependências do cliente
 │   ├── 📄 vite.config.js               # Configuração do Vite
 │   ├── 📄 index.html                   # HTML base
+│   ├── 📄 vercel.json                  # Configuração do Vercel
+│   ├── 📄 .env.example                 # Template de variáveis do frontend
 │   └── 📂 src/
 │       ├── 📄 main.jsx                 # Entry point React
 │       ├── 📄 App.jsx                  # Componente principal
@@ -179,9 +182,17 @@ graph LR
 │       └── 📂 services/
 │           └── 📄 api.js               # Cliente HTTP Axios
 │
+├── 📂 docs/
+│   └── 📂 screenshots/                 # 📸 Imagens do projeto
+│       ├── 📄 chat.svg
+│       └── 📄 welcome.svg
+│
 ├── 📄 README.md                        # 📖 Documentação principal
 ├── 📄 CHECKLIST.md                     # ✅ Lista de verificação DIO
 ├── 📄 GIT_COMMANDS.md                  # 🚀 Guia de comandos Git
+├── 📄 DEPLOY.md                        # 🌐 Guia de deploy completo
+├── 📄 Dockerfile                       # 🐳 Container Docker
+├── 📄 railway.toml                     # ⚙️ Configuração Railway
 ├── 📄 .gitignore                       # 🚫 Arquivos ignorados
 └── 📄 LICENSE                          # 📄 Licença MIT
 ```
@@ -200,10 +211,10 @@ graph LR
 
 ```bash
 # Clone via HTTPS
-git clone https://github.com/Cateano93/chatgpt-clone-dio.git
+git clone https://github.com/matheusflorindo32/chatgpt-clone-dio.git
 
 # Ou via SSH
-git clone git@github.com:Cateano93/chatgpt-clone-dio.git
+git clone git@github.com:matheusflorindo32/chatgpt-clone-dio.git
 
 cd chatgpt-clone-dio
 ```
@@ -246,6 +257,61 @@ npm run dev
 
 ---
 
+## 🌐 Deploy em Produção
+
+Deploy completo com **Railway** (backend) + **Vercel** (frontend).
+
+### 🏗️ Arquitetura de Deploy
+
+```
+┌─────────────────┐      HTTP POST /api/chat      ┌──────────────────┐
+│   Vercel        │ ─────────────────────────────→ │   Railway        │
+│   (React)       │                                │   (Node.js)      │
+│   Port 443      │ ←───────────────────────────── │   Port 5000      │
+└─────────────────┘         JSON {reply}           └──────────────────┘
+         │                                                    │
+         │                                            ┌───────▼──────┐
+         │                                            │  OpenAI API  │
+         │                                            └──────────────┘
+         ▼
+┌─────────────────┐
+│  Usuário Final  │
+└─────────────────┘
+```
+
+### 1️⃣ Backend no Railway
+
+1. Acesse https://railway.app/new
+2. Selecione **"Deploy from GitHub repo"**
+3. Escolha `matheusflorindo32/chatgpt-clone-dio`
+4. Adicione as variáveis de ambiente:
+   ```env
+   OPENAI_API_KEY=sk-sua_chave_api_aqui
+   OPENAI_MODEL=gpt-3.5-turbo
+   FRONTEND_URL=https://chatgpt-clone-dio.vercel.app
+   ```
+5. Clique em **Deploy**
+6. Copie a URL gerada (ex: `https://seu-projeto.up.railway.app`)
+
+### 2️⃣ Frontend no Vercel
+
+1. Acesse https://vercel.com/new
+2. Importe `matheusflorindo32/chatgpt-clone-dio`
+3. Configure:
+   - **Framework Preset:** Vite
+   - **Root Directory:** `web`
+   - **Build Command:** `npm run build`
+   - **Output Directory:** `dist`
+4. Adicione a variável:
+   ```env
+   VITE_API_URL=https://seu-projeto.up.railway.app
+   ```
+5. Clique em **Deploy**
+
+> 📄 Veja o guia completo em [`DEPLOY.md`](DEPLOY.md)
+
+---
+
 ## ⚙️ Configuração
 
 Crie um arquivo `.env` na pasta `server/` com as seguintes variáveis:
@@ -265,6 +331,20 @@ OPENAI_MODEL=gpt-3.5-turbo
 
 # Porta do servidor backend (opcional)
 PORT=5000
+```
+
+### 🎨 Frontend (web/.env)
+
+Para desenvolvimento local, crie `web/.env`:
+
+```env
+# URL do backend (padrão: localhost)
+VITE_API_URL=http://localhost:5000
+```
+
+Para produção, use a URL do Railway:
+```env
+VITE_API_URL=https://seu-projeto.up.railway.app
 ```
 
 > ⚠️ **IMPORTANTE:** O arquivo `.env` está no `.gitignore` e NUNCA deve ser commitado!
@@ -385,5 +465,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND...
 <br>
 
 ⭐ **Se este projeto te ajudou, deixe uma star no repositório!** ⭐
+
+</div>
 
 </div>
