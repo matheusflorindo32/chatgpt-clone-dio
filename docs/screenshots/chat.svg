@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#343541"/>
+      <stop offset="100%" style="stop-color:#202123"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#bg)" rx="8"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="600" height="50" fill="#202123" rx="8"/>
+  <text x="300" y="32" font-family="Segoe UI, sans-serif" font-size="16" fill="#ececf1" text-anchor="middle" font-weight="600">🤖 ChatGPT Clone</text>
+  <circle cx="560" cy="25" r="6" fill="#22c55e"/>
+  
+  <!-- User Message -->
+  <rect x="0" y="60" width="600" height="60" fill="#343541"/>
+  <circle cx="40" cy="90" r="16" fill="#10a37f"/>
+  <text x="40" y="95" font-family="Segoe UI, sans-serif" font-size="14" text-anchor="middle" fill="white">👤</text>
+  <text x="75" y="85" font-family="Segoe UI, sans-serif" font-size="12" fill="#8e8ea0">Você</text>
+  <text x="75" y="105" font-family="Segoe UI, sans-serif" font-size="13" fill="#ececf1">O que é a DIO e qual o objetivo deste projeto?</text>
+  
+  <!-- Bot Message -->
+  <rect x="0" y="130" width="600" height="100" fill="#444654"/>
+  <circle cx="40" cy="160" r="16" fill="#202123"/>
+  <text x="40" y="165" font-family="Segoe UI, sans-serif" font-size="14" text-anchor="middle">🤖</text>
+  <text x="75" y="155" font-family="Segoe UI, sans-serif" font-size="12" fill="#8e8ea0">Assistente</text>
+  <text x="75" y="178" font-family="Segoe UI, sans-serif" font-size="13" fill="#ececf1">A DIO (Digital Innovation One) é uma plataforma de educação</text>
+  <text x="75" y="196" font-family="Segoe UI, sans-serif" font-size="13" fill="#ececf1">que oferece bootcamps e desafios práticos em tecnologia.</text>
+  <text x="75" y="214" font-family="Segoe UI, sans-serif" font-size="13" fill="#ececf1">Este projeto é um clone do ChatGPT usando Node.js e React.</text>
+  
+  <!-- Input Area -->
+  <rect x="0" y="340" width="600" height="60" fill="#343541"/>
+  <rect x="20" y="350" width="520" height="40" fill="#40414f" rx="8" stroke="#4d4d4f" stroke-width="1"/>
+  <text x="40" y="375" font-family="Segoe UI, sans-serif" font-size="13" fill="#8e8ea0">Digite sua mensagem...</text>
+  <circle cx="560" cy="370" r="18" fill="#10a37f"/>
+  <text x="560" y="375" font-family="Segoe UI, sans-serif" font-size="14" text-anchor="middle" fill="white">➤</text>
+</svg>

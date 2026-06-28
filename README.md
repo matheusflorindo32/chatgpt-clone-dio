@@ -57,7 +57,7 @@
 <!-- Placeholder para GIF/Screenshot -->
 | 💬 Chat em Ação | 🏠 Tela de Boas-vindas |
 |:---:|:---:|
-| ![Chat](https://via.placeholder.com/500x350/343541/10a37f?text=Chat+em+Execu%C3%A7%C3%A3o) | ![Welcome](https://via.placeholder.com/500x350/343541/10a37f?text=Tela+Inicial) |
+| ![Chat](docs/screenshots/chat.svg) | ![Welcome](docs/screenshots/welcome.svg) |
 
 > 💡 **Substitua** os placeholders acima por screenshots reais do projeto na pasta `docs/screenshots/`
 
