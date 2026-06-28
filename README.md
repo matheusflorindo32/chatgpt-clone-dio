@@ -55,12 +55,20 @@
 
 <div align="center">
 
+### 🌐 Acesse Online
+
+| 🎨 Frontend (Vercel) | ⚙️ Backend (Railway) |
+|:---:|:---:|
+| [**🔗 chatgpt-clone-dio.vercel.app**](https://chatgpt-clone-aluvpq5w6-matheusflorindo32s-projects.vercel.app/) | [**🔗 API Status**](https://chatgpt-clone-dio-production.up.railway.app/health) |
+
+> 💡 **O frontend está no Vercel** e o backend protegido no Railway
+
 <!-- Placeholder para GIF/Screenshot -->
 | 💬 Chat em Ação | 🏠 Tela de Boas-vindas |
 |:---:|:---:|
 | ![Chat](docs/screenshots/chat.svg) | ![Welcome](docs/screenshots/welcome.svg) |
 
-> 💡 **Substitua** os placeholders acima por screenshots reais do projeto na pasta `docs/screenshots/`
+> 📸 **Substitua** os placeholders acima por screenshots reais do projeto na pasta `docs/screenshots/`
 
 </div>
 
@@ -288,10 +296,10 @@ Deploy completo com **Railway** (backend) + **Vercel** (frontend).
    ```env
    OPENAI_API_KEY=sk-sua_chave_api_aqui
    OPENAI_MODEL=gpt-3.5-turbo
-   FRONTEND_URL=https://chatgpt-clone-dio.vercel.app
+   FRONTEND_URL=https://chatgpt-clone-aluvpq5w6-matheusflorindo32s-projects.vercel.app
    ```
 5. Clique em **Deploy**
-6. Copie a URL gerada (ex: `https://seu-projeto.up.railway.app`)
+6. Copie a URL gerada (ex: `https://chatgpt-clone-dio-production.up.railway.app`)
 
 ### 2️⃣ Frontend no Vercel
 
@@ -304,7 +312,7 @@ Deploy completo com **Railway** (backend) + **Vercel** (frontend).
    - **Output Directory:** `dist`
 4. Adicione a variável:
    ```env
-   VITE_API_URL=https://seu-projeto.up.railway.app
+   VITE_API_URL=https://chatgpt-clone-dio-production.up.railway.app
    ```
 5. Clique em **Deploy**
 
@@ -344,7 +352,7 @@ VITE_API_URL=http://localhost:5000
 
 Para produção, use a URL do Railway:
 ```env
-VITE_API_URL=https://seu-projeto.up.railway.app
+VITE_API_URL=https://chatgpt-clone-dio-production.up.railway.app
 ```
 
 > ⚠️ **IMPORTANTE:** O arquivo `.env` está no `.gitignore` e NUNCA deve ser commitado!
