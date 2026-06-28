@@ -6,6 +6,11 @@ const OpenAI = require('openai');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Adiciona healthcheck simples para Railway
+app.get('/', (req, res) => {
+  res.json({ status: 'ChatGPT Clone API is running', timestamp: new Date().toISOString() });
+});
+
 /**
  * Inicializa o cliente OpenAI com a chave da API
  * A chave NUNCA é exposta no frontend - fica apenas no servidor
@@ -14,8 +19,12 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-// Middlewares
-app.use(cors()); // Permite comunicação entre frontend e backend
+// Middlewares - CORS configurado para permitir frontend no Vercel/Railway
+app.use(cors({
+  origin: process.env.FRONTEND_URL || '*',
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type']
+}));
 app.use(express.json()); // Parseia JSON no body das requisições
 
 /**
