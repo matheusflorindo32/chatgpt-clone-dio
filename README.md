@@ -360,7 +360,7 @@ Este projeto está licenciado sob a [MIT License](LICENSE) — sinta-se livre pa
 ```
 MIT License
 
-Copyright (c) 2024 Matheus Florindo de Deus
+Copyright (c) 2025 Matheus Florindo de Deus
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
